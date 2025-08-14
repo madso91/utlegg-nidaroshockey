@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Utleggsskjema Nidaros Hockey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <img src="nidaros-logo.png" alt="Nidaros Hockey Logo" class="logo">
+    <h1>Utleggsskjema</h1>
+    <form id="utleggForm">
+        <label for="navn">Navn</label>
+        <input type="text" id="navn" name="navn" required>
+        <label for="fodsel">Fødselsdato</label>
+        <input type="date" id="fodsel" name="fodsel" required>
+        <label for="personnummer">Personnummer</label>
+        <input type="text" id="personnummer" name="personnummer" required>
+        <label for="adresse">Adresse</label>
+        <input type="text" id="adresse" name="adresse" required>
+        <label for="telefon">Telefonnummer</label>
+        <input type="tel" id="telefon" name="telefon" required>
+        <label for="kontonummer">Kontonummer</label>
+        <input type="text" id="kontonummer" name="kontonummer" required>
+        <h2>Kvitteringsbilder med formål og beløp</h2>
+        <div id="utleggContainer">
+            <div class="utleggItem">
+                <label>Formål</label>
+                <input type="text" name="formalBilde" required>
+                <label>Beløp (kr)</label>
+                <input type="number" name="belopBilde" required>
+                <label>Last opp kvittering</label>
+                <input type="file" name="bilde" accept="image/*" capture="environment" required>
+            </div>
+        </div>
+        <button type="button" id="leggTilUtleggBtn">+ Legg til nytt utlegg</button>
+        <h3>Total: <span id="totalSum">0</span> kr</h3>
+        <h2>Signatur</h2>
+        <canvas id="signatureCanvas" width="500" height="200" style="border:1px solid #ccc; background:white;"></canvas>
+        <br>
+        <button type="button" id="clearSignature">Tøm signatur</button>
+        <button type="submit">Send inn</button>
+    </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

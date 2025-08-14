@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.logo {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+h1, h2, h3 {
+    text-align: center;
+    color: #DAA520;
+}
+form label {
+    display: block;
+    margin-top: 10px;
+}
+form input, form button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+#utleggContainer {
+    margin-top: 20px;
+}
+.utleggItem {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+button {
+    background-color: #000;
+    color: #DAA520;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #333;
+}
